@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import data from '../mockData/data';
 
+import AddProductForm from './components/AddProductForm';
 import ProductListing from './components/ProductListing';
 import Cart from './components/Cart';
 
@@ -18,6 +19,7 @@ const App = () => {
       </header>
       <main>
         <ProductListing products={products}/>
+        <AddProductForm />
       </main>
     </div>
   )
