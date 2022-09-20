@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import EditForm from './EditForm';
 
-const Product = ({product}) => {
+const EditableProduct = ({product}) => {
   const [editShown, setEditShown] = useState(false);
 
   const toggleEdit = () => {
@@ -29,4 +29,4 @@ const Product = ({product}) => {
   )
 }
 
-export default Product
+export default EditableProduct

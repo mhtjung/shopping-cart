@@ -1,4 +1,4 @@
-import Product from './Product';
+import EditableProduct from './EditableProduct';
 
 const ProductListing = ({products}) => {
   return (
@@ -6,7 +6,7 @@ const ProductListing = ({products}) => {
       <h2>Products</h2>
       {
       products.map(prod => {
-        return <Product key={prod.title} product={prod}/>
+        return <EditableProduct key={prod.title} product={prod}/>
       })
       }
     </div>

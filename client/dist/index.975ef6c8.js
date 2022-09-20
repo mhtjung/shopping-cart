@@ -27219,8 +27219,8 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _product = require("./Product");
-var _productDefault = parcelHelpers.interopDefault(_product);
+var _editableProduct = require("./EditableProduct");
+var _editableProductDefault = parcelHelpers.interopDefault(_editableProduct);
 const ProductListing = ({ products  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "product-listing",
@@ -27233,7 +27233,7 @@ const ProductListing = ({ products  })=>{
                 columnNumber: 7
             }, undefined),
             products.map((prod)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _productDefault.default), {
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _editableProductDefault.default), {
                     product: prod
                 }, prod.title, false, {
                     fileName: "src/components/ProductListing.jsx",
@@ -27258,7 +27258,7 @@ $RefreshReg$(_c, "ProductListing");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Product":"ke9yL"}],"km3Ru":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./EditableProduct":"acROu"}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("react-refresh/runtime");
 function debounce(func, delay) {
@@ -27378,11 +27378,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"ke9yL":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$704e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react-refresh/runtime":"786KC"}],"acROu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5a48 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$704e.prelude(module);
+$parcel$ReactRefreshHelpers$5a48.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27392,7 +27392,7 @@ var _react = require("react");
 var _editForm = require("./EditForm");
 var _editFormDefault = parcelHelpers.interopDefault(_editForm);
 var _s = $RefreshSig$();
-const Product = ({ product  })=>{
+const EditableProduct = ({ product  })=>{
     _s();
     const [editShown, setEditShown] = (0, _react.useState)(false);
     const toggleEdit = ()=>{
@@ -27407,7 +27407,7 @@ const Product = ({ product  })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: product.title
                     }, void 0, false, {
-                        fileName: "src/components/Product.jsx",
+                        fileName: "src/components/EditableProduct.jsx",
                         lineNumber: 14,
                         columnNumber: 9
                     }, undefined),
@@ -27415,7 +27415,7 @@ const Product = ({ product  })=>{
                         className: "price",
                         children: product.price
                     }, void 0, false, {
-                        fileName: "src/components/Product.jsx",
+                        fileName: "src/components/EditableProduct.jsx",
                         lineNumber: 15,
                         columnNumber: 9
                     }, undefined),
@@ -27423,7 +27423,7 @@ const Product = ({ product  })=>{
                         className: "quantity",
                         children: product.quantity
                     }, void 0, false, {
-                        fileName: "src/components/Product.jsx",
+                        fileName: "src/components/EditableProduct.jsx",
                         lineNumber: 16,
                         columnNumber: 9
                     }, undefined),
@@ -27434,7 +27434,7 @@ const Product = ({ product  })=>{
                                 className: "button add-to-cart",
                                 children: "Add to Cart"
                             }, void 0, false, {
-                                fileName: "src/components/Product.jsx",
+                                fileName: "src/components/EditableProduct.jsx",
                                 lineNumber: 18,
                                 columnNumber: 11
                             }, undefined),
@@ -27443,13 +27443,13 @@ const Product = ({ product  })=>{
                                 className: "button edit",
                                 children: "Edit"
                             }, void 0, false, {
-                                fileName: "src/components/Product.jsx",
+                                fileName: "src/components/EditableProduct.jsx",
                                 lineNumber: 19,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/Product.jsx",
+                        fileName: "src/components/EditableProduct.jsx",
                         lineNumber: 17,
                         columnNumber: 9
                     }, undefined),
@@ -27458,45 +27458,45 @@ const Product = ({ product  })=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                             children: "X"
                         }, void 0, false, {
-                            fileName: "src/components/Product.jsx",
+                            fileName: "src/components/EditableProduct.jsx",
                             lineNumber: 22,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/components/Product.jsx",
+                        fileName: "src/components/EditableProduct.jsx",
                         lineNumber: 21,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/Product.jsx",
+                fileName: "src/components/EditableProduct.jsx",
                 lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             editShown ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _editFormDefault.default), {}, void 0, false, {
-                fileName: "src/components/Product.jsx",
+                fileName: "src/components/EditableProduct.jsx",
                 lineNumber: 26,
                 columnNumber: 21
             }, undefined) : null
         ]
     }, void 0, true, {
-        fileName: "src/components/Product.jsx",
+        fileName: "src/components/EditableProduct.jsx",
         lineNumber: 12,
         columnNumber: 5
     }, undefined);
 };
-_s(Product, "OcUeKEqiYcrdeSUawcC11toKXOs=");
-_c = Product;
-exports.default = Product;
+_s(EditableProduct, "OcUeKEqiYcrdeSUawcC11toKXOs=");
+_c = EditableProduct;
+exports.default = EditableProduct;
 var _c;
-$RefreshReg$(_c, "Product");
+$RefreshReg$(_c, "EditableProduct");
 
-  $parcel$ReactRefreshHelpers$704e.postlude(module);
+  $parcel$ReactRefreshHelpers$5a48.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./EditForm":"LYl5G","react":"21dqq"}],"LYl5G":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./EditForm":"LYl5G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"LYl5G":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$dbdf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
