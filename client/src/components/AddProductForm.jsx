@@ -1,8 +1,30 @@
-import { useState } from "react"
+import axios from "axios";
+import { useState } from "react";
 
-const AddProductForm = () => {
-  const [showForm, setShowForm] = useState(false)
-  
+const AddProductForm = ({setProducts, products}) => {
+  const [showForm, setShowForm] = useState(false);
+
+  const [productName, setProductName] = useState("");
+  const [productPrice, setProductPrice] = useState("");
+  const [productQuantity, setProductQuantity] = useState("");
+
+  const resetForm = () => {
+    setProductName("");
+    setProductPrice("");
+    setProductQuantity("");
+  }
+
+  const handleSubmit = async (e) => {
+    try {
+      const response = await axios.post("/api/products", {title: productName, price: productPrice, quantity: productQuantity});
+      const newProduct = response.data;
+      setProducts(products.concat(newProduct));
+      resetForm();
+      toggleForm();
+    } catch (error) {
+      console.log(error);
+    }
+  }
   const toggleForm = () => {
     setShowForm(!showForm)
   }
@@ -14,21 +36,21 @@ const AddProductForm = () => {
       <form>
         <div className="input-group">
           <label htmlFor="product-name">Product Name</label>
-          <input type="text" id="product-name" value=""/>
+          <input onChange={(e) => setProductName(e.target.value)} type="text" id="product-name" value={productName}/>
         </div>
 
         <div className="input-group">
           <label htmlFor="product-price">Price</label>
-          <input type="text" id="product-price" value=""/>
+          <input onChange={(e) => setProductPrice(e.target.value)} type="text" id="product-price" value={productPrice}/>
         </div>
 
         <div className="input-group">
           <label htmlFor="product-quantity">Quantity</label>
-          <input type="text" id="product-quantity" value=""/>
+          <input onChange={(e) => setProductQuantity(e.target.value)} type="text" id="product-quantity" value={productQuantity}/>
         </div>
 
         <div className="actions form-actions">
-          <a className="button">Add</a>
+          <a onClick={handleSubmit}className="button">Add</a>
           <a onClick={toggleForm}className="button">Cancel</a>
         </div>
       </form>

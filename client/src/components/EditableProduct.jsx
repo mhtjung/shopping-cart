@@ -1,11 +1,24 @@
+import axios from 'axios';
 import { useState } from 'react';
 import EditForm from './EditForm';
 
-const EditableProduct = ({product}) => {
+const EditableProduct = ({product, products, setProducts}) => {
   const [editShown, setEditShown] = useState(false);
 
   const toggleEdit = () => {
     setEditShown(!editShown)
+  }
+
+  const deleteProduct = async () => {
+    try {
+      const id = product["_id"];
+      await axios.delete(`/api/products/${id}`);
+      setProducts(
+        products.filter(p => p["_id"] !== id)
+      )
+    } catch(error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -18,12 +31,12 @@ const EditableProduct = ({product}) => {
           <a className="button add-to-cart">Add to Cart</a>
           <a onClick={toggleEdit} className="button edit">Edit</a>
         </div>
-        <a className="delete-button">
+        <a onClick={deleteProduct} className="delete-button">
           <span>X</span>
         </a>
       </div>
       {
-        editShown ? <EditForm /> : null
+        editShown ? <EditForm product={product} products={products} setProducts={setProducts} toggleEdit={toggleEdit} /> : null
       }      
     </div>
   )
