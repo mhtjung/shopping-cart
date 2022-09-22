@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import EditForm from './EditForm';
 
-const EditableProduct = ({product, products, setProducts}) => {
+const EditableProduct = ({onAddToCart, product, products, setProducts}) => {
   const [editShown, setEditShown] = useState(false);
 
   const toggleEdit = () => {
@@ -21,14 +21,18 @@ const EditableProduct = ({product, products, setProducts}) => {
     }
   }
 
+  const handleAddtoCart = () => {
+    onAddToCart(product["_id"]);
+  }
+
   return (
     <div className="product">
       <div className="product-details">
         <h3>{product.title}</h3>
-        <p className="price">{product.price}</p>
+        <p className="price">${product.price}</p>
         <p className="quantity">{product.quantity}</p>
         <div className="actions product-actions">
-          <a className="button add-to-cart">Add to Cart</a>
+          <a onClick={handleAddtoCart} className={`button add-to-cart ${product.quantity === 0 ? 'disabled' : ''}`}>Add to Cart</a>
           <a onClick={toggleEdit} className="button edit">Edit</a>
         </div>
         <a onClick={deleteProduct} className="delete-button">

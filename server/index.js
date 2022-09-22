@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const apiRoutes = require("./routes/api");
 const uiRoutes = require("./routes/ui");
+const morgan = require("morgan")
 require("dotenv").config();
 
 const app = express();
@@ -19,7 +20,7 @@ mongoose
   .catch((err) => console.log(err));
 
 mongoose.Promise = global.Promise;
-
+app.use(morgan('tiny'));
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "*");

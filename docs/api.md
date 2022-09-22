@@ -220,8 +220,8 @@ Updated product and item are returned wrapped in an object.
 #### 1.7.2.1. Example Response
 
 ```json
-{ "product": {
-  {
+{
+  "product": {
     "_id": "51d754d72092473333a809e1",
     "title": "Mac Mini",
     "price": 850,
@@ -231,7 +231,6 @@ Updated product and item are returned wrapped in an object.
     "_v": 0
   },
   "item": {
-  {
     "_id": "51d754d72092473333a809e1",
     "title": "Mac Mini",
     "price": 850,
@@ -240,7 +239,6 @@ Updated product and item are returned wrapped in an object.
     "createdAt": "2020-10-04T05:57:02.777Z",
     "updatedAt": "2020-10-04T05:57:02.777Z",
     "_v": 0
-  }
   }
 }
 ```

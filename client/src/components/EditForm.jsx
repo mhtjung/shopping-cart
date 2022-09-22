@@ -19,6 +19,7 @@ const EditForm = ({product, products, setProducts, toggleEdit}) => {
           return p;
         })
       )
+      toggleEdit();
     } catch(error) {
       console.log(error);
     }
