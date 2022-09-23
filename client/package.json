@@ -14,7 +14,8 @@
     "http-proxy-middleware": "^2.0.6",
     "parcel": "^2.7.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.3"
   },
   "devDependencies": {
     "browserify-zlib": "^0.2.0",
