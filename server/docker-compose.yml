@@ -1,0 +1,8 @@
+version: '1'
+services:
+  app:
+    image: themikejung/shopping-cart:latest
+    ports: 
+      - 5001:5001
+    environment:
+      - DB=${DB}
