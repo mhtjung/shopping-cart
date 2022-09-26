@@ -14,7 +14,7 @@ const AddProductForm = ({setProducts, products}) => {
     setProductQuantity("");
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     try {
       const response = await axios.post("/api/products", {title: productName, price: productPrice, quantity: productQuantity});
       const newProduct = response.data;
@@ -50,7 +50,7 @@ const AddProductForm = ({setProducts, products}) => {
         </div>
 
         <div className="actions form-actions">
-          <a onClick={handleSubmit}className="button">Add</a>
+          <a href="/#" onClick={handleSubmit}className="button">Add</a>
           <a onClick={toggleForm}className="button">Cancel</a>
         </div>
       </form>

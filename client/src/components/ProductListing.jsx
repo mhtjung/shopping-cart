@@ -1,4 +1,4 @@
-import EditableProduct from './EditableProduct';
+import EditableProduct from './EditableProduct.jsx';
 
 const ProductListing = ({onAddToCart, products, setProducts}) => {
   return (

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import EditForm from './EditForm';
+import EditForm from './EditForm.jsx';
 
 const EditableProduct = ({onAddToCart, product, products, setProducts}) => {
   const [editShown, setEditShown] = useState(false);

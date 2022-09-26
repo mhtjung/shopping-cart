@@ -4,9 +4,9 @@
 import { useEffect, useState } from 'react';
 import axios from "axios";
 
-import AddProductForm from './components/AddProductForm';
-import ProductListing from './components/ProductListing';
-import Cart from './components/Cart';
+import AddProductForm from './components/AddProductForm.jsx';
+import ProductListing from './components/ProductListing.jsx';
+import Cart from './components/Cart.jsx';
 
 const App = () => {
   const [products, setProducts] = useState([]);

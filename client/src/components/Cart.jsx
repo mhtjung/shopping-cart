@@ -1,6 +1,4 @@
-import {useState} from 'react';
-
-import CartItem from "./CartItem"
+import CartItem from "./CartItem.jsx"
 
 const Cart = ({onCheckout, cartItems}) => {
   const subtotals = cartItems.map(item => item.quantity * item.price)

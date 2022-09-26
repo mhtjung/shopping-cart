@@ -1,4 +1,3 @@
-import Product from "../../../server/models/product";
 import { useState } from "react";
 import axios from "axios";
 
@@ -7,7 +6,7 @@ const EditForm = ({product, products, setProducts, toggleEdit}) => {
   const [newPrice, setNewPrice] = useState(product.price);
   const [newQuantity, setNewQuantity] = useState(product.quantity);
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async() => {
     try {
       const id = product["_id"];
       const response = await axios.put(`/api/products/${id}`, {title: newTitle, price: newPrice, quantity: newQuantity});
